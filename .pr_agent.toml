@@ -1,0 +1,67 @@
+# Configuration de PR-Agent
+
+[config]
+# Modèle IA à utiliser
+model = "gemini/gemini-2.5-flash"
+fallback_models = ["gemini/gemini-2.5-flash"]
+
+# Langue des commentaires
+language = "fr"
+
+# Mode de publication des commentaires
+publish_output = true
+publish_output_progress = true
+
+[pr_reviewer]
+# Activer la revue automatique à l'ouverture de la PR
+auto_review = true
+
+# Nombre de suggestions de code à générer
+num_code_suggestions = 4
+
+# Activer les commentaires inline dans le code
+inline_code_comments = true
+
+# Exiger une revue de sécurité
+require_security_review = true
+
+# Exiger une revue des tests
+require_tests_review = true
+
+# Exiger une revue de la documentation
+require_estimate_effort_to_review = true
+
+# Points à vérifier
+extra_instructions = """
+- Vérifier la conformité avec les bonnes pratiques du langage
+- Identifier les problèmes de performance potentiels
+- Suggérer des améliorations de lisibilité
+- Vérifier la gestion des erreurs
+- S'assurer que le code est testable
+"""
+
+[pr_code_suggestions]
+# Suggestions automatiques de code
+auto_improve = true
+
+# Nombre maximum de suggestions
+num_code_suggestions = 4
+
+# Activer les suggestions inline
+commitable_code_suggestions = true
+
+[pr_description]
+# Ne pas générer automatiquement la description
+auto_description = false
+
+# Générer un résumé de la PR
+enable_pr_type = true
+
+[github]
+# Configuration GitHub
+publish_inline_comments = true
+publish_review = true
+publish_labels = true
+
+# Labels automatiques selon le type de changement
+label_on_review = true
