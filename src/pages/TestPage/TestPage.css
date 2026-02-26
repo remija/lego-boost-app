@@ -1,0 +1,19 @@
+.test-page {
+  padding: 20px 0;
+}
+
+.test-page__title {
+  font-family: 'Fredoka', cursive;
+  font-size: 32px;
+  color: white;
+  margin: 0 0 10px 0;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.test-page__subtitle {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 30px 0;
+  text-align: center;
+}

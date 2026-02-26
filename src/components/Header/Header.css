@@ -1,0 +1,33 @@
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: float 3s ease-in-out infinite;
+}
+
+.header__title {
+  font-family: 'Fredoka', cursive;
+  font-size: 48px;
+  color: white;
+  margin: 0 0 10px 0;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+}
+
+.header__title::before {
+  content: '🤖 ';
+}
+
+.header__subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 16px;
+  margin: 0;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}

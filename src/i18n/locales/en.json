@@ -1,0 +1,161 @@
+{
+  "common": {
+    "connected": "Connected",
+    "disconnected": "Disconnected",
+    "connecting": "Connecting...",
+    "speed": "Speed: {{value}}%",
+    "port": "Port",
+    "activate": "Activate",
+    "deactivate": "Deactivate",
+    "stop": "Stop"
+  },
+  "header": {
+    "title": "LEGO BOOST",
+    "subtitle": "Web Bluetooth Control"
+  },
+  "nav": {
+    "r2d2": "R2-D2",
+    "test": "Test",
+    "codeLab": "Code Lab"
+  },
+  "connectionMenu": {
+    "connect": "Connect",
+    "disconnect": "Disconnect",
+    "hubConnected": "Hub connected",
+    "noHub": "No hub connected",
+    "turnOnHub": "Turn on your LEGO Boost hub",
+    "searching": "Searching..."
+  },
+  "connectionCard": {
+    "title": "Connection Status",
+    "connectButton": "Connect",
+    "connectedButton": "Connected",
+    "connectingButton": "Connecting...",
+    "disconnectButton": "Disconnect",
+    "hubConnected": "Hub connected"
+  },
+  "motorControls": {
+    "title": "Motor Controls",
+    "hint": "Hold buttons to move the robot"
+  },
+  "externalMotors": {
+    "title": "External Motors",
+    "hint": "Connect motors to ports C and D of the hub"
+  },
+  "ledControl": {
+    "title": "Hub LED"
+  },
+  "distanceSensor": {
+    "title": "Distance Sensor",
+    "hint": "Connect the distance/color sensor to the selected port"
+  },
+  "tiltSensor": {
+    "title": "Tilt Sensor",
+    "hint": "Built-in hub sensor - tilt the hub to see values",
+    "front": "Front",
+    "back": "Back",
+    "left": "Left",
+    "right": "Right"
+  },
+  "logsPanel": {
+    "title": "Connection Log",
+    "clear": "Clear",
+    "empty": "No events yet..."
+  },
+  "infoFooter": {
+    "text": "This application requires a Web Bluetooth compatible browser (Chrome, Edge, Opera)"
+  },
+  "joystick": {
+    "hint": "Drag or 2-finger trackpad"
+  },
+  "headControl": {
+    "title": "Head"
+  },
+  "obstacleDetector": {
+    "inactive": "Inactive",
+    "danger": "Obstacle nearby!",
+    "warning": "Caution",
+    "safe": "Clear path"
+  },
+  "r2d2LedEffects": {
+    "title": "Mood"
+  },
+  "r2d2Page": {
+    "disconnected": "Connect to the LEGO Boost hub from the test page"
+  },
+  "testPage": {
+    "title": "Test Page",
+    "subtitle": "Test all LEGO Boost hub features"
+  },
+  "colors": {
+    "random": "Random",
+    "off": "Off",
+    "pink": "Pink",
+    "purple": "Purple",
+    "blue": "Blue",
+    "lightBlue": "Light blue",
+    "cyan": "Cyan",
+    "green": "Green",
+    "yellow": "Yellow",
+    "orange": "Orange",
+    "red": "Red",
+    "white": "White"
+  },
+  "codeLab": {
+    "title": "Code Lab",
+    "emptyCanvas": "Drag your blocks here!",
+    "play": "Play",
+    "stop": "Stop",
+    "save": "Save",
+    "load": "Open",
+    "clear": "Clear",
+    "new": "New",
+    "delete": "Delete",
+    "connectFirst": "Connect first!",
+    "blocks": {
+      "moveForward": "Move forward",
+      "moveBackward": "Move backward",
+      "turnLeft": "Turn left",
+      "turnRight": "Turn right",
+      "stop": "Stop",
+      "motor": "Motor",
+      "led": "Light",
+      "wait": "Wait",
+      "repeat": "Repeat"
+    },
+    "editor": {
+      "title": "Edit block",
+      "speed": "Speed",
+      "duration": "Duration",
+      "port": "Port",
+      "color": "Color",
+      "times": "Times",
+      "slow": "Slow",
+      "medium": "Medium",
+      "fast": "Fast",
+      "veryFast": "Very fast",
+      "seconds": "{{value}}s",
+      "close": "Close",
+      "delete": "Delete",
+      "actions": "Actions to repeat",
+      "noActions": "No actions added",
+      "addAction": "Add an action"
+    },
+    "saveModal": {
+      "title": "My programs",
+      "saveAs": "Save as...",
+      "programName": "Program name",
+      "save": "Save",
+      "cancel": "Cancel",
+      "empty": "No saved programs",
+      "examples": "Examples",
+      "myPrograms": "My programs"
+    },
+    "speed": {
+      "slow": "Slow",
+      "medium": "Medium",
+      "fast": "Fast",
+      "veryFast": "Very fast"
+    }
+  }
+}

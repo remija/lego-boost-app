@@ -1,0 +1,102 @@
+.r2d2-page {
+  min-height: 100%;
+  padding: 20px 0;
+}
+
+.r2d2-page__header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.r2d2-page__logo {
+  font-family: 'Fredoka', cursive;
+  font-size: 48px;
+  color: #60a5fa;
+  text-shadow:
+    0 0 20px rgba(96, 165, 250, 0.5),
+    0 4px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+}
+
+.r2d2-page__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.r2d2-page__status-dot {
+  width: 8px;
+  height: 8px;
+  background: #ef4444;
+  border-radius: 50%;
+}
+
+.r2d2-page__status-dot--connected {
+  background: #22c55e;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.r2d2-page__disconnected {
+  text-align: center;
+  padding: 60px 20px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.r2d2-page__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.r2d2-page__main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 500px) {
+  .r2d2-page__main {
+    grid-template-columns: 1fr;
+  }
+}
+
+.r2d2-page__section {
+  background: rgba(15, 23, 42, 0.8);
+  border-radius: 16px;
+  padding: 25px;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.r2d2-page__section--joystick {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r2d2-page__section--head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.r2d2-page__section--sensors {
+  background: transparent;
+  padding: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.r2d2-page__section--led {
+  background: rgba(15, 23, 42, 0.6);
+}

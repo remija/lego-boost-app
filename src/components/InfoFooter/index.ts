@@ -1,0 +1,1 @@
+export { InfoFooter } from './InfoFooter';

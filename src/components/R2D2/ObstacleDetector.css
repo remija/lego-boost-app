@@ -1,0 +1,121 @@
+.obstacle-detector {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  border: 1px solid rgba(96, 165, 250, 0.3);
+}
+
+.obstacle-detector--danger {
+  border-color: #ef4444;
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.obstacle-detector--warning {
+  border-color: #f59e0b;
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.obstacle-detector--safe {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+}
+
+.obstacle-detector__radar {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background: radial-gradient(circle, #0f172a 0%, #020617 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #1e3a5f;
+}
+
+.obstacle-detector__rings {
+  position: absolute;
+  inset: 0;
+}
+
+.obstacle-detector__ring {
+  position: absolute;
+  border: 1px solid rgba(96, 165, 250, 0.2);
+  border-radius: 50%;
+}
+
+.obstacle-detector__ring--1 {
+  inset: 30%;
+}
+
+.obstacle-detector__ring--2 {
+  inset: 15%;
+}
+
+.obstacle-detector__ring--3 {
+  inset: 0;
+}
+
+.obstacle-detector__blip {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #22c55e;
+  animation: pulse 1s infinite;
+}
+
+.obstacle-detector--danger .obstacle-detector__blip {
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+}
+
+.obstacle-detector--warning .obstacle-detector__blip {
+  background: #f59e0b;
+  box-shadow: 0 0 10px #f59e0b;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.obstacle-detector__info {
+  flex: 1;
+}
+
+.obstacle-detector__value {
+  font-family: 'Fredoka', cursive;
+  font-size: 28px;
+  color: white;
+  line-height: 1;
+}
+
+.obstacle-detector__value::after {
+  content: ' cm';
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.obstacle-detector__status {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.obstacle-detector--danger .obstacle-detector__status {
+  color: #ef4444;
+}
+
+.obstacle-detector--warning .obstacle-detector__status {
+  color: #f59e0b;
+}
+
+.obstacle-detector--safe .obstacle-detector__status {
+  color: #22c55e;
+}

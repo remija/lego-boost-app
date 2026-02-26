@@ -1,0 +1,149 @@
+.distance-sensor {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+}
+
+.distance-sensor--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.distance-sensor__title {
+  font-family: 'Fredoka', cursive;
+  color: white;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.distance-sensor__port-select {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.distance-sensor__port-label {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.distance-sensor__port-button {
+  width: 48px;
+  height: 48px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Fredoka', cursive;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.distance-sensor__port-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.distance-sensor__port-button--active {
+  background: white;
+  color: #d97706;
+  border-color: white;
+}
+
+.distance-sensor__port-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.distance-sensor__display {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.distance-sensor__value {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.distance-sensor__number {
+  font-size: 48px;
+  font-weight: bold;
+  color: white;
+  font-family: 'Fredoka', cursive;
+}
+
+.distance-sensor__unit {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-left: 5px;
+}
+
+.distance-sensor__placeholder {
+  font-size: 48px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: 'Fredoka', cursive;
+}
+
+.distance-sensor__bar-container {
+  height: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.distance-sensor__bar {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e 0%, #eab308 50%, #ef4444 100%);
+  border-radius: 6px;
+  transition: width 0.1s ease-out;
+}
+
+.distance-sensor__toggle {
+  display: block;
+  width: 100%;
+  padding: 14px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Fredoka', cursive;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #d97706;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.distance-sensor__toggle:hover:not(:disabled) {
+  background: white;
+  transform: scale(1.02);
+}
+
+.distance-sensor__toggle--active {
+  background: #ef4444;
+  color: white;
+}
+
+.distance-sensor__toggle--active:hover:not(:disabled) {
+  background: #dc2626;
+}
+
+.distance-sensor__toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.distance-sensor__hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  margin: 15px 0 0 0;
+}

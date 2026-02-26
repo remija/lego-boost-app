@@ -1,0 +1,121 @@
+.external-motors {
+  padding: 30px;
+  margin-bottom: 30px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+}
+
+.external-motors--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.external-motors__title {
+  font-family: 'Fredoka', cursive;
+  color: white;
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  text-align: center;
+}
+
+.external-motors__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.external-motors__motor {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  padding: 15px 20px;
+}
+
+.external-motors__motor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.external-motors__motor-label {
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.external-motors__motor-value {
+  color: white;
+  font-size: 14px;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 4px 12px;
+  border-radius: 20px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.external-motors__motor-control {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.external-motors__slider {
+  flex: 1;
+  height: 8px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.3);
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.external-motors__slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.external-motors__slider::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.external-motors__stop-button {
+  padding: 8px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Fredoka', cursive;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.external-motors__stop-button:hover:not(:disabled) {
+  background: #dc2626;
+  transform: scale(1.05);
+}
+
+.external-motors__stop-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.external-motors__hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  margin: 15px 0 0 0;
+}

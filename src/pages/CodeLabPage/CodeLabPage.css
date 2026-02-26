@@ -1,0 +1,41 @@
+.code-lab {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 180px);
+  padding: 0 20px 20px;
+  flex: 1;
+  /* Sortir du container limité à 600px */
+  width: calc(100vw - 80px);
+  max-width: 1200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.code-lab__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.code-lab__title {
+  font-family: 'Fredoka', cursive;
+  font-size: 28px;
+  color: white;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 480px) {
+  .code-lab__header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .code-lab__title {
+    text-align: center;
+    font-size: 24px;
+  }
+}

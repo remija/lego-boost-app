@@ -1,0 +1,199 @@
+.block {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 80px;
+  min-height: 80px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  user-select: none;
+  touch-action: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  position: relative;
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.block::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 12px;
+  right: 12px;
+  height: 6px;
+  border-radius: 3px 3px 0 0;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.block:hover {
+  transform: scale(1.05);
+}
+
+.block:active {
+  transform: scale(0.98);
+}
+
+/* Movement blocks - Blue gradient */
+.block--movement {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+}
+
+.block--movement::before {
+  background: linear-gradient(135deg, #60a5fa 0%, #3b82f6 100%);
+}
+
+/* Motor blocks - Purple gradient */
+.block--motors {
+  background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%);
+}
+
+.block--motors::before {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+}
+
+/* LED blocks - Multicolor gradient */
+.block--led {
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 50%, #eab308 100%);
+}
+
+.block--led::before {
+  background: linear-gradient(135deg, #f472b6 0%, #fb923c 50%, #facc15 100%);
+}
+
+/* Control blocks - Yellow/Orange gradient */
+.block--control {
+  background: linear-gradient(135deg, #eab308 0%, #f97316 100%);
+}
+
+.block--control::before {
+  background: linear-gradient(135deg, #facc15 0%, #eab308 100%);
+}
+
+/* Block states */
+.block--executing {
+  animation: pulse-execute 0.6s ease-in-out infinite;
+  box-shadow:
+    0 0 20px rgba(255, 255, 255, 0.6),
+    0 4px 12px rgba(0, 0, 0, 0.2),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+}
+
+.block--dragging {
+  opacity: 0.9;
+  transform: scale(1.1) rotate(2deg);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.35),
+    inset 0 -3px 0 rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+}
+
+.block--palette {
+  flex-direction: column;
+  justify-content: center;
+  min-width: 80px;
+  min-height: 80px;
+  padding: 12px;
+}
+
+.block--palette .block__content {
+  flex-direction: column;
+  align-items: center;
+}
+
+.block--palette .block__label {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Block icon */
+.block__icon {
+  font-size: 28px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.block--palette .block__icon {
+  font-size: 32px;
+}
+
+/* Block content */
+.block__content {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.block__label {
+  font-family: 'Fredoka', cursive;
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.block__info {
+  font-family: 'Space Mono', monospace;
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  white-space: nowrap;
+}
+
+/* Color preview for LED block */
+.block__color-preview {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.block__color-preview--random {
+  animation: spin-color 2s linear infinite;
+}
+
+@keyframes spin-color {
+  from {
+    filter: hue-rotate(0deg);
+  }
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* Animations */
+@keyframes pulse-execute {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+}
+
+/* Touch-friendly sizes */
+@media (pointer: coarse) {
+  .block {
+    min-height: 88px;
+    padding: 14px 18px;
+  }
+
+  .block--palette {
+    min-width: 88px;
+    min-height: 88px;
+  }
+
+  .block__icon {
+    font-size: 32px;
+  }
+
+  .block--palette .block__icon {
+    font-size: 36px;
+  }
+}

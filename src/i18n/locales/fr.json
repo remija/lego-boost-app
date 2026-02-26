@@ -1,0 +1,161 @@
+{
+  "common": {
+    "connected": "Connecté",
+    "disconnected": "Déconnecté",
+    "connecting": "Connexion...",
+    "speed": "Vitesse : {{value}}%",
+    "port": "Port",
+    "activate": "Activer",
+    "deactivate": "Désactiver",
+    "stop": "Stop"
+  },
+  "header": {
+    "title": "LEGO BOOST",
+    "subtitle": "Contrôle via Web Bluetooth"
+  },
+  "nav": {
+    "r2d2": "R2-D2",
+    "test": "Test",
+    "codeLab": "Code Lab"
+  },
+  "connectionMenu": {
+    "connect": "Se connecter",
+    "disconnect": "Déconnecter",
+    "hubConnected": "Hub connecté",
+    "noHub": "Aucun hub connecté",
+    "turnOnHub": "Allumez votre hub LEGO Boost",
+    "searching": "Recherche..."
+  },
+  "connectionCard": {
+    "title": "État de connexion",
+    "connectButton": "Se connecter",
+    "connectedButton": "Connecté",
+    "connectingButton": "Connexion...",
+    "disconnectButton": "Déconnecter",
+    "hubConnected": "Hub connecté"
+  },
+  "motorControls": {
+    "title": "Contrôles moteurs",
+    "hint": "Maintenez les boutons enfoncés pour déplacer le robot"
+  },
+  "externalMotors": {
+    "title": "Moteurs externes",
+    "hint": "Connectez des moteurs aux ports C et D du hub"
+  },
+  "ledControl": {
+    "title": "LED du hub"
+  },
+  "distanceSensor": {
+    "title": "Capteur de distance",
+    "hint": "Connectez le capteur de distance/couleur sur le port sélectionné"
+  },
+  "tiltSensor": {
+    "title": "Capteur d'inclinaison",
+    "hint": "Capteur intégré au hub - inclinez le hub pour voir les valeurs",
+    "front": "Avant",
+    "back": "Arrière",
+    "left": "Gauche",
+    "right": "Droite"
+  },
+  "logsPanel": {
+    "title": "Journal de connexion",
+    "clear": "Effacer",
+    "empty": "Aucun événement pour le moment..."
+  },
+  "infoFooter": {
+    "text": "Cette application nécessite un navigateur compatible Web Bluetooth (Chrome, Edge, Opera)"
+  },
+  "joystick": {
+    "hint": "Glisser ou trackpad 2 doigts"
+  },
+  "headControl": {
+    "title": "Tête"
+  },
+  "obstacleDetector": {
+    "inactive": "Inactif",
+    "danger": "Obstacle proche !",
+    "warning": "Attention",
+    "safe": "Voie libre"
+  },
+  "r2d2LedEffects": {
+    "title": "Humeur"
+  },
+  "r2d2Page": {
+    "disconnected": "Connectez-vous au hub LEGO Boost depuis la page de test"
+  },
+  "testPage": {
+    "title": "Page de Test",
+    "subtitle": "Testez toutes les fonctionnalités du hub LEGO Boost"
+  },
+  "colors": {
+    "random": "Aléatoire",
+    "off": "Off",
+    "pink": "Rose",
+    "purple": "Violet",
+    "blue": "Bleu",
+    "lightBlue": "Bleu clair",
+    "cyan": "Cyan",
+    "green": "Vert",
+    "yellow": "Jaune",
+    "orange": "Orange",
+    "red": "Rouge",
+    "white": "Blanc"
+  },
+  "codeLab": {
+    "title": "Code Lab",
+    "emptyCanvas": "Glisse tes blocs ici !",
+    "play": "Jouer",
+    "stop": "Stop",
+    "save": "Sauver",
+    "load": "Ouvrir",
+    "clear": "Effacer",
+    "new": "Nouveau",
+    "delete": "Supprimer",
+    "connectFirst": "Connecte-toi d'abord !",
+    "blocks": {
+      "moveForward": "Avancer",
+      "moveBackward": "Reculer",
+      "turnLeft": "Tourner gauche",
+      "turnRight": "Tourner droite",
+      "stop": "Stop",
+      "motor": "Moteur",
+      "led": "Lumière",
+      "wait": "Attendre",
+      "repeat": "Répéter"
+    },
+    "editor": {
+      "title": "Modifier le bloc",
+      "speed": "Vitesse",
+      "duration": "Durée",
+      "port": "Port",
+      "color": "Couleur",
+      "times": "Fois",
+      "slow": "Lent",
+      "medium": "Moyen",
+      "fast": "Rapide",
+      "veryFast": "Très rapide",
+      "seconds": "{{value}}s",
+      "close": "Fermer",
+      "delete": "Supprimer",
+      "actions": "Actions à répéter",
+      "noActions": "Aucune action ajoutée",
+      "addAction": "Ajouter une action"
+    },
+    "saveModal": {
+      "title": "Mes programmes",
+      "saveAs": "Sauvegarder sous...",
+      "programName": "Nom du programme",
+      "save": "Sauvegarder",
+      "cancel": "Annuler",
+      "empty": "Aucun programme sauvegardé",
+      "examples": "Exemples",
+      "myPrograms": "Mes programmes"
+    },
+    "speed": {
+      "slow": "Lent",
+      "medium": "Moyen",
+      "fast": "Rapide",
+      "veryFast": "Très rapide"
+    }
+  }
+}

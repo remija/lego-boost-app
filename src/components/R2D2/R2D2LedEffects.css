@@ -1,0 +1,59 @@
+.r2d2-led {
+  text-align: center;
+}
+
+.r2d2-led--disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.r2d2-led__title {
+  font-family: 'Fredoka', cursive;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.r2d2-led__effects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.r2d2-led__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.r2d2-led__button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--effect-color);
+  box-shadow: 0 0 15px color-mix(in srgb, var(--effect-color) 30%, transparent);
+}
+
+.r2d2-led__button:disabled {
+  cursor: not-allowed;
+}
+
+.r2d2-led__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px currentColor;
+}
+
+.r2d2-led__name {
+  font-weight: 500;
+}

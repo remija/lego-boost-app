@@ -1,0 +1,73 @@
+.block-palette {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 16px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.block-palette__scroll {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 6px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255, 255, 255, 0.3) transparent;
+}
+
+/* En desktop, permettre le wrap des blocs */
+@media (min-width: 768px) {
+  .block-palette {
+    padding: 20px;
+  }
+
+  .block-palette__scroll {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    overflow-x: visible;
+  }
+}
+
+.block-palette__scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.block-palette__scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.block-palette__scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+.block-palette__scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.block-palette__item {
+  flex-shrink: 0;
+  transition: transform 0.15s ease;
+}
+
+.block-palette__item:hover {
+  transform: translateY(-4px);
+}
+
+.block-palette__item:active {
+  transform: scale(0.95);
+}
+
+/* Touch-friendly spacing */
+@media (pointer: coarse) {
+  .block-palette {
+    padding: 14px;
+  }
+
+  .block-palette__scroll {
+    gap: 14px;
+  }
+}

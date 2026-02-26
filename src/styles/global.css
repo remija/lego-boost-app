@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Fredoka:wght@600;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+/* Brick design - used by connection card and logs panel */
+.brick {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+  border-radius: 12px;
+  position: relative;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.3),
+    inset 0 -4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.brick::before {
+  content: '';
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  right: 20px;
+  height: 8px;
+  background: linear-gradient(135deg, #ff8787 0%, #ff6b6b 100%);
+  border-radius: 4px 4px 0 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}

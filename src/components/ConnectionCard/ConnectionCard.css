@@ -1,0 +1,118 @@
+.connection-card {
+  padding: 40px;
+  margin-bottom: 30px;
+}
+
+.connection-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.connection-card__title {
+  font-family: 'Fredoka', cursive;
+  color: white;
+  margin: 0 0 10px 0;
+  font-size: 24px;
+}
+
+.connection-card__status {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.connection-card__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #94a3b8;
+}
+
+.connection-card__indicator--connected {
+  background: #4ade80;
+}
+
+.connection-card__indicator--connecting {
+  background: #fbbf24;
+  box-shadow: 0 0 10px #fbbf24;
+  animation: pulse 1s infinite;
+}
+
+.connection-card__indicator--disconnected {
+  background: #94a3b8;
+}
+
+.connection-card__status-text {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.connection-card__hub-info {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 10px 20px;
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+}
+
+.connection-card__hub-label {
+  color: white;
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.connection-card__hub-name {
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.connection-card__actions {
+  display: flex;
+  gap: 15px;
+}
+
+.connection-card__button {
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: bold;
+  font-family: 'Fredoka', cursive;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.connection-card__button--connect {
+  flex: 1;
+  background: #4ade80;
+  color: #1e293b;
+}
+
+.connection-card__button--connect:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.connection-card__button--disconnect {
+  background: #ef4444;
+  color: white;
+}
+
+.connection-card__button--disabled {
+  background: #94a3b8;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
