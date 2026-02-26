@@ -47,12 +47,32 @@ src/
 └── styles/         # Styles globaux
 ```
 
+## Scripts
+
+```bash
+npm install          # Installer les dépendances
+npm run dev          # Serveur de développement
+npm run build        # Build de production (tsc + vite build)
+npm run lint         # Lancer ESLint
+npm test             # Lancer les tests
+npm run preview      # Prévisualiser le build de production
+```
+
+## CI/CD
+
+Le projet utilise GitHub Actions avec 3 workflows :
+
+- **CI** — Lint, tests et build sur chaque PR vers `main` ou `develop`
+- **Deploy** — Build et déploiement sur S3 + invalidation CloudFront au push sur `main`
+- **PR Agent** — Revue de code automatique via Codium PR Agent (Gemini 2.5 Flash)
+
 ## Technologies
 
 - React 19 + TypeScript
 - Vite
 - React Router
 - Web Bluetooth API
+- GitHub Actions (CI/CD)
 
 ## Protocole LEGO
 
