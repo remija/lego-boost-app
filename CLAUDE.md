@@ -9,6 +9,7 @@ npm install          # Install dependencies
 npm run dev          # Start development server
 npm run build        # Build for production (runs tsc + vite build)
 npm run lint         # Run ESLint
+npm run test         # Run tests (placeholder for now, ready for Vitest)
 npm run preview      # Preview production build
 ```
 
@@ -87,3 +88,11 @@ src/
 - Head motor: Port D
 - Distance sensor: Port C (auto-subscribed on connection)
 - Movement: Internal motors A/B via virtual joystick
+
+## CI/CD
+
+Three GitHub Actions workflows:
+
+- **CI** (`.github/workflows/ci.yml`): Runs on PRs to `main`/`develop`. Three parallel jobs: lint, test, build. Node 22 with npm cache.
+- **Deploy** (`.github/workflows/deploy.yml`): Runs on push to `main`. Builds and deploys `dist/` to S3 + CloudFront invalidation. Requires secrets: `AWS_ACCESS_KEY_ID`, `AWS_SECRET_ACCESS_KEY`, `AWS_REGION`, `S3_BUCKET`, `CLOUDFRONT_DIST_ID`.
+- **PR Agent** (`.github/workflows/pr-agent.yml`): Automated code review with Codium PR Agent + Gemini 2.5 Flash. Config in `.pr_agent.toml`. Requires secret: `GOOGLE_API_KEY`.
