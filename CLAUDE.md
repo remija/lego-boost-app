@@ -9,7 +9,7 @@ npm install          # Install dependencies
 npm run dev          # Start development server
 npm run build        # Build for production (runs tsc + vite build)
 npm run lint         # Run ESLint
-npm run test         # Run tests (placeholder for now, ready for Vitest)
+npm run test         # Run tests with Vitest (vitest run)
 npm run preview      # Preview production build
 ```
 
@@ -32,20 +32,53 @@ src/
 │   ├── TiltSensor/         # Tilt sensor with visual indicator
 │   ├── LogsPanel/          # Connection event logs
 │   ├── InfoFooter/         # Browser compatibility info
+│   ├── LanguageSwitcher/   # FR/EN language toggle
+│   ├── CodeLab/            # Visual block programming components
+│   │   ├── Block/          # Individual draggable block
+│   │   ├── BlockEditor/    # Block parameter editor
+│   │   ├── BlockPalette/   # Available blocks panel
+│   │   ├── ProgramCanvas/  # Drop zone for building programs
+│   │   ├── ProgramControls/ # Run/stop/clear controls
+│   │   └── SaveLoadModal/  # Save and load programs
 │   └── R2D2/               # R2-D2 specific components
-│       ├── Joystick/       # Virtual joystick for movement
-│       ├── HeadControl/    # Head rotation control (Port C)
-│       ├── ObstacleDetector/  # Distance-based obstacle detection
-│       └── R2D2LedEffects/ # LED animation effects
+│       ├── Joystick.tsx    # Virtual joystick for movement
+│       ├── HeadControl.tsx # Head rotation control (Port D)
+│       ├── ObstacleDetector.tsx  # Distance-based obstacle detection
+│       └── R2D2LedEffects.tsx    # LED animation effects
 ├── pages/
 │   ├── R2D2Page/           # Dedicated R2-D2 controller interface
-│   └── TestPage/           # Feature testing page
+│   ├── TestPage/           # Feature testing page
+│   └── CodeLabPage/        # Visual block programming interface
 ├── context/
-│   └── LegoBoostContext.tsx  # Shared state context for hub connection
+│   ├── LegoBoostContextDef.ts  # Context type definition and createContext
+│   ├── LegoBoostContext.tsx    # Context provider
+│   ├── useLegoBoostContext.ts  # Custom hook to consume context
+│   └── index.ts
 ├── hooks/
-│   └── useLegoBoost.ts     # Bluetooth connection logic and LEGO protocol
+│   ├── useLegoBoost.ts     # Bluetooth connection logic and LEGO protocol
+│   ├── useDragDrop.ts      # Drag-and-drop logic for block programming
+│   └── useProgramExecutor.ts  # Executes block programs on the hub
 ├── types/
-│   └── index.ts            # TypeScript types
+│   ├── index.ts            # TypeScript types
+│   └── blocks.ts           # Block programming types
+├── constants/
+│   ├── colors.ts           # LED color constants
+│   └── index.ts
+├── i18n/
+│   ├── index.ts            # i18next setup (FR/EN, browser detection)
+│   └── locales/
+│       ├── fr.json
+│       └── en.json
+├── utils/
+│   └── programStorage.ts   # localStorage save/load for programs
+├── test/
+│   ├── helpers/
+│   │   └── renderWithProviders.tsx  # Test utility with context providers
+│   ├── mocks/
+│   │   ├── i18n.ts                  # i18n mock
+│   │   ├── legoBoostContext.ts      # Context mock
+│   │   └── webBluetooth.ts         # Web Bluetooth API mock
+│   └── setup.ts
 └── styles/
     └── global.css          # Global styles and shared .brick class
 ```
@@ -80,8 +113,8 @@ src/
 - **State**: React Context (`LegoBoostContext`) shares hub state across pages
 - **Hook**: `useLegoBoost` encapsulates all Bluetooth operations and protocol logic
 - **Type imports**: Use `import type` for type-only imports (verbatimModuleSyntax enabled)
-- **UI text**: French language
-- **Routing**: React Router with two pages (R2-D2 and Test)
+- **i18n**: react-i18next with FR/EN support, browser language detection, fallback FR. Use `useTranslation()` hook.
+- **Routing**: React Router with three pages (R2-D2, Test, CodeLab)
 
 ## R2-D2 Configuration
 

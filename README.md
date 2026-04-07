@@ -6,8 +6,10 @@ Application React pour contrôler le LEGO Boost Move Hub via Web Bluetooth, avec
 
 - **Connexion Bluetooth** - Menu de connexion global accessible depuis n'importe quelle page
 - **Interface R2-D2** - Joystick virtuel, contrôle de la tête, détection d'obstacles, effets LED
+- **CodeLab** - Programmation visuelle par blocs : créer, sauvegarder et exécuter des programmes
 - **Page de test** - Contrôle individuel de tous les composants (moteurs, LED, capteurs)
 - **Capteurs** - Support du capteur de distance et du capteur d'inclinaison intégré
+- **Multilingue** - Interface disponible en français et en anglais (détection automatique)
 
 ## Prérequis
 
@@ -27,23 +29,27 @@ npm run dev
 1. Allumez votre hub LEGO Boost
 2. Cliquez sur le menu de connexion en haut à droite
 3. Cliquez sur "Se connecter" et sélectionnez votre hub dans la liste
-4. Utilisez l'interface R2-D2 ou la page de test
+4. Utilisez l'interface R2-D2, la page de test ou le CodeLab
 
 ## Configuration R2-D2
 
-- **Moteur de la tête** : Port C
-- **Capteur de distance** : Port D
+- **Moteur de la tête** : Port D
+- **Capteur de distance** : Port C
 - **Moteurs de déplacement** : Moteurs internes A et B
 
 ## Structure du projet
 
 ```
 src/
-├── components/     # Composants UI réutilisables
-├── pages/          # Pages de l'application (R2D2, Test)
+├── components/     # Composants UI réutilisables (dont CodeLab/)
+├── pages/          # Pages de l'application (R2D2, Test, CodeLab)
 ├── context/        # Context React pour l'état partagé
-├── hooks/          # Hook useLegoBoost pour la logique Bluetooth
+├── hooks/          # Logique Bluetooth, drag-and-drop, exécution de programmes
 ├── types/          # Types TypeScript
+├── constants/      # Constantes (couleurs LED…)
+├── i18n/           # Internationalisation (FR/EN)
+├── utils/          # Utilitaires (sauvegarde des programmes)
+├── test/           # Helpers et mocks pour les tests
 └── styles/         # Styles globaux
 ```
 
@@ -72,6 +78,9 @@ Le projet utilise GitHub Actions avec 3 workflows :
 - Vite
 - React Router
 - Web Bluetooth API
+- react-i18next (internationalisation FR/EN)
+- Vitest (tests unitaires)
+- Playwright (tests d'interface)
 - GitHub Actions (CI/CD)
 
 ## Protocole LEGO
