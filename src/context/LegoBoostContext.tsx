@@ -1,9 +1,6 @@
-import { createContext, useContext, type ReactNode } from 'react';
+import type { ReactNode } from 'react';
 import { useLegoBoost } from '../hooks/useLegoBoost';
-
-type LegoBoostContextType = ReturnType<typeof useLegoBoost>;
-
-const LegoBoostContext = createContext<LegoBoostContextType | null>(null);
+import { LegoBoostContext } from './LegoBoostContextDef';
 
 export function LegoBoostProvider({ children }: { children: ReactNode }) {
   const legoBoost = useLegoBoost();
@@ -13,12 +10,4 @@ export function LegoBoostProvider({ children }: { children: ReactNode }) {
       {children}
     </LegoBoostContext.Provider>
   );
-}
-
-export function useLegoBoostContext() {
-  const context = useContext(LegoBoostContext);
-  if (!context) {
-    throw new Error('useLegoBoostContext must be used within a LegoBoostProvider');
-  }
-  return context;
 }

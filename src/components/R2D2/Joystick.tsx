@@ -65,6 +65,7 @@ export function Joystick({ onMove, onRelease, disabled }: JoystickProps) {
   }, [onRelease]);
 
   // Animation loop pour l'effet ressort du trackpad
+  const updateSpringAnimationRef = useRef<(() => void) | undefined>(undefined);
   const updateSpringAnimation = useCallback(() => {
     const pos = trackpadPositionRef.current;
     const vel = trackpadVelocityRef.current;
@@ -117,8 +118,12 @@ export function Joystick({ onMove, onRelease, disabled }: JoystickProps) {
     const normalizedY = Math.round((-newY / maxDistance) * 100);
 
     onMove(normalizedX, normalizedY);
-    animationFrameRef.current = requestAnimationFrame(updateSpringAnimation);
+    animationFrameRef.current = requestAnimationFrame(() => updateSpringAnimationRef.current?.());
   }, [maxDistance, springStrength, damping, onMove, onRelease]);
+
+  useEffect(() => {
+    updateSpringAnimationRef.current = updateSpringAnimation;
+  }, [updateSpringAnimation]);
 
   const handleWheel = useCallback((e: WheelEvent) => {
     if (disabled || isDragging) return;

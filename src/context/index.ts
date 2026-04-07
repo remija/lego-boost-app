@@ -1,1 +1,2 @@
-export { LegoBoostProvider, useLegoBoostContext } from './LegoBoostContext';
+export { LegoBoostProvider } from './LegoBoostContext';
+export { useLegoBoostContext } from './useLegoBoostContext';
